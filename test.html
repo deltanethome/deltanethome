@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form WhatsApp</title>
+</head>
+<body>
+    <form id="whatsapp-form">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required>
+        <br>
+        <label for="alamat">Alamat:</label>
+        <select id="alamat" name="alamat" required>
+            <option value="Kediri">Kediri</option>
+            <option value="Nganjuk">Nganjuk</option>
+            <option value="Mojoroto">Mojoroto</option>
+        </select>
+        <br>
+        <label for="nomer-hp">Nomer HP:</label>
+        <input type="text" id="nomer-hp" name="nomer-hp" required>
+        <br>
+        <button type="submit">Kirim ke WhatsApp</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<script>
+$(document).ready(function () {
+    $('#whatsapp-form').submit(function (e) {
+        e.preventDefault();
+
+        // Ambil data dari formulir
+        var nama = $('#nama').val();
+        var alamat = $('#alamat').val();
+        var nomerHp = $('#nomer-hp').val();
+
+        // Format pesan WhatsApp
+        var pesan = "Halo, saya " + nama + ". Alamat saya di " + alamat + ". Nomer HP saya: " + nomerHp;
+
+        // Ganti nomor WhatsApp sesuai dengan nomor yang Anda inginkan
+        var nomorWhatsApp = "087762586054";
+
+        // Buat URL untuk mengarahkan ke WhatsApp
+        var whatsappUrl = "https://api.whatsapp.com/send?phone=" + nomorWhatsApp + "&text=" + encodeURIComponent(pesan);
+
+        // Buka link WhatsApp
+        window.open(whatsappUrl, '_blank');
+    });
+});
+</script>

@@ -339,6 +339,24 @@
   <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
   <div id="preloader"></div>
 
+  <script>
+              // Mendapatkan elemen navbar
+      var navbar = document.getElementById('navbar');
+
+      // Menambahkan event listener untuk event scroll
+      window.addEventListener('scroll', function() {
+        // Menentukan offset tinggi ketika warna harus berubah
+        var scrollHeight = window.scrollY;
+
+        // Menambahkan atau menghapus kelas 'scrolled' berdasarkan offset tinggi
+        if (scrollHeight > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+  </script>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>

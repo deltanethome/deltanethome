@@ -461,4 +461,20 @@
           window.open(whatsappUrl, '_blank');
       });
   });
+
+          // Mendapatkan elemen navbar
+          var navbar = document.getElementById('navbar');
+
+// Menambahkan event listener untuk event scroll
+window.addEventListener('scroll', function() {
+  // Menentukan offset tinggi ketika warna harus berubah
+  var scrollHeight = window.scrollY;
+
+  // Menambahkan atau menghapus kelas 'scrolled' berdasarkan offset tinggi
+  if (scrollHeight > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
   </script>

@@ -91,12 +91,12 @@
         <ul>
           <!-- <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li> -->
           <li><a href="#popup1" class="text-decoration-none">Promo</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Paket</a></li>
-          <li><a class="nav-link scrollto" href="area.html">Lokasi Area</a></li>
-          <li class="dropdown"><a href="#"><span>Bantuan & Dukungan</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="text-decoration-none" href="#pricing">Paket</a></li>
+          <li><a class="text-decoration-none" href="area.html">Lokasi Area</a></li>
+          <li class="text-decoration-none dropdown"><a href="#"><span>Bantuan & Dukungan</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#about">Pendaftaran Member</a></li>
-              <li><a href="#portfolio">Pembayaran</a></li>
+              <li><a href="registrasi.html">Pendaftaran Member</a></li>
+              <li><a href="pembayaran.html">Pembayaran</a></li>
               <!-- <li><a href="#about">About Us</a></li> -->
               <li><a href="blog.html">Blog</a></li>
               <!-- <li><a href="#portfolio">Portfolio</a></li> -->
@@ -113,7 +113,7 @@
               </li> -->
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="https://api.whatsapp.com/send?phone=6285850102226&text=">Kontak</a>
+          <li><a class="text-decoration-none" href="https://api.whatsapp.com/send?phone=6285850102226&text=">Kontak</a>
           </li>
           <li><a class="getstarted scrollto" style="color:#ffe600" href="https://e.ebilling.id/billing/login.php">MY
               MEMBER</a></li>
@@ -924,6 +924,25 @@
         }
       }
     });
+
+    // Mendapatkan elemen navbar
+var navbar = document.getElementById('navbar');
+
+// Menambahkan event listener untuk event scroll
+window.addEventListener('scroll', function() {
+  // Menentukan offset tinggi ketika warna harus berubah
+  var scrollHeight = window.scrollY;
+
+  // Menambahkan atau menghapus kelas 'scrolled' berdasarkan offset tinggi
+  if (scrollHeight > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+
+
   </script>
 
   <!-- Vendor JS Files -->

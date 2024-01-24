@@ -73,7 +73,7 @@
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png"  class="img-fluid"></a>-->
       <div id="popup1" class="overlay">
         <div class="popup">
-          <h2>Promo!!! Pasang 6 bln awal gratis 1 bln</h2>
+          <h2>Promo!!! Pasang 12 bln awal gratis 1 bln</h2>
           <div class="btn-wrap">
             <a href="https://api.whatsapp.com/send?phone=6285850102226&text=Halo%20Admin,%20Saya%20ingin%20membeli%20paket%20wifi%20dari%20website%20deltanethome.com%20"
               class="btn-buy">PESAN SEKARANG</a>
@@ -133,7 +133,7 @@
                 <h2>Internet Super Cepat dan Stabil</h2>
                 <h2>Harga Super Terjangkau</h2>
                 <br>
-                <h1>Up to 20 Mbps</h1>
+                <h1>Selamat datang di DeltanetHome</h1>
                 <div>
                     <a href="https://api.whatsapp.com/send?phone=6285850102226&text=Halo%20Admin,%20Saya%20ingin%20membeli%20paket%20wifi%20dari%20website%20deltanethome.com%20"
                         class="btn-get-started scrollto">Beli Sekarang</a>
@@ -159,7 +159,7 @@
     <!-- <section id="klien" class="klein section-bg"> -->
       <div class="container-lg py-3">
         <div class="section col-md-12 m-auto text-center py-3">
-          <h2>Mitra Kepercayaan Kami :</h2>
+          <h2>Partners Kepercayaan Kami :</h2>
           <!-- <p class="section-title">
               Klien Kami :
           </p> -->
@@ -172,19 +172,15 @@
             <img src="./assets/img/kerjasama/aecorp.png"  class="item" width="200px" height="90px" />
             <img src="./assets/img/kerjasama/apjii.png"  class="item" width="200px" height="90px" />
             <img src="./assets/img/kerjasama/deltanet.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/lentera.png"  class="item" width="200px" height="90px" />
+            <img src="./assets/img/kerjasama/logoldp.png"  class="item" width="200px" height="90px" />
             <img src="./assets/img/kerjasama/ngeprojectin.png"  class="item" width="200px" height="90px" />
             <img src="./assets/img/kerjasama/jatara.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/aecorp.png"  class="item" width="200px" height="90px" />
             <img src="./assets/img/kerjasama/kominfo.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/jatara.png"  class="item" width="200px" height="90px" />
+            <img src="./assets/img/kerjasama/fiberstar.png"  class="item" width="200px" height="90px" />
             <img src="./assets/img/kerjasama/deltanet.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/lentera.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/aecorp.png"  class="item" width="200px" height="90px" />
+            <img src="./assets/img/kerjasama/apjii.png"  class="item" width="200px" height="90px" />
             <img src="./assets/img/kerjasama/usman.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/ngeline.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/jatara.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/aecorp.png"  class="item" width="200px" height="90px" />
+            <img src="./assets/img/kerjasama/mikrotik.png"  class="item" width="200px" height="90px" />
           </div>
         </div>
       </div>
@@ -294,7 +290,7 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150">
-            <img src="assets/img/internetdunia2.png" width="500px" class="img-fluid" >
+            <img src="assets/img/internetdunia0.jpg" width="500px" class="img-fluid" >
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
             <h3>Kenapa DELTA.NET Berbeda?</h3>
@@ -701,7 +697,7 @@
             <div class="info-box  mb-4">
               <i class="bx bx-envelope"></i>
               <h3>Email Us</h3>
-              <p>deltanetwork@gmail.com</p>
+              <p>deltanet.official@gmail.com</p>
             </div>
           </div>
 
@@ -771,7 +767,7 @@
               Pakunden, Kec. Pesantren, Kota Kediri<br>
               Jawa Timur 64132 <br><br>
               <strong>WhatsApp</strong> +62 823-3012-5253<br>
-              <strong>Email:</strong> deltanetwork@gmail.com<br>
+              <strong>Email:</strong> deltanet.official@gmail.com<br>
             </p>
           </div>
 
@@ -865,6 +861,30 @@
   <script src="assets/js/isotope.pkgd.js"></script>
   <!-- Page Script -->
   <script>
+    $(document).ready(function () {
+      $('.php-email-form').submit(function (e) {
+          e.preventDefault();
+  
+          // Get data from the form
+          var nama = $('#name').val();  
+          var email = $('#email').val();
+          var subject = $('#subject').val();
+          var message = $('#message').val();
+  
+          // Build the message for WhatsApp
+          var pesan = "Name: " + nama + "%0AEmail: " + email + "%0ASubject: " + subject + "%0AMessage: " + message;
+  
+          // Replace with your WhatsApp number
+          var nomorWhatsApp = "082330125253";
+  
+          // Create URL to open WhatsApp
+          var whatsappUrl = "https://api.whatsapp.com/send?phone=" + nomorWhatsApp + "&text=" + encodeURIComponent(pesan);
+  
+          // Open the WhatsApp link in a new tab
+          window.open(whatsappUrl, '_blank');
+      });
+    });
+
     $(window).load(function () {
       // init Isotope
       var $projects = $('.projects').isotope({

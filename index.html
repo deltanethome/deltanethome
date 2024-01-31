@@ -948,29 +948,29 @@
       }
     });
 
-    // Mendapatkan elemen navbar
-var navbar = document.getElementById('navbar');
+        // Mendapatkan elemen navbar
+    var navbar = document.getElementById('navbar');
 
-// Menambahkan event listener untuk event scroll
-window.addEventListener('scroll', function() {
-  // Menentukan offset tinggi ketika warna harus berubah
-  var scrollHeight = window.scrollY;
+    // Menambahkan event listener untuk event scroll
+    window.addEventListener('scroll', function() {
+      // Menentukan offset tinggi ketika warna harus berubah
+      var scrollHeight = window.scrollY;
 
-  // Menambahkan atau menghapus kelas 'scrolled' berdasarkan offset tinggi
-  if (scrollHeight > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
+      // Menambahkan atau menghapus kelas 'scrolled' berdasarkan offset tinggi
+      if (scrollHeight > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
 
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'GA_MEASUREMENT_ID', 'auto');
-  ga('send', 'pageview');
+      ga('create', 'GA_MEASUREMENT_ID', 'auto');
+      ga('send', 'pageview');
 
 
 

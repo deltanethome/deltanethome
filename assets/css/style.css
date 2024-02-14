@@ -329,7 +329,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: rgb(43, 43, 43);
+  color: rgb(255, 255, 255);
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -1832,6 +1832,49 @@ section {
   .popup{
     width: 100%;
   }
+}
+
+/* NEW BUTTON PAKET */
+
+.new-label {
+  position: relative;
+  display: inline-block;
+}
+
+.new-label::after {
+  content: "new";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  padding: 2px 5px;
+  background-color: #1100ff;
+  color: #fff;
+  border-radius: 70%;
+  border: 2px solid #002fff;
+}
+
+/* CSS untuk dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown ul {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+  padding: 10px 0;
+}
+
+.dropdown ul li {
+  padding: 10px;
+  text-align: left;
+}
+
+.dropdown:hover ul {
+  display: block;
 }
 
 

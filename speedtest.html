@@ -380,41 +380,43 @@ function initUI(){
       </div>
     </header><!-- End Header -->
     <br><br><br><br><br>
-<h1>Speedtest DeltaNet</h1>
-<div id="testWrapper">
-	<div id="test">
-        <div class="testGroup">
-			<div class="testArea2">
-				<div class="testName">Ping</div>
-				<div id="pingText" class="meterText" style="color:#AA6060"></div>
-				<div class="unit">ms</div>
-			</div>
-			<div class="testArea2">
-				<div class="testName">Jitter</div>
-				<div id="jitText" class="meterText" style="color:#AA6060"></div>
-				<div class="unit">ms</div>
-			</div>
-		</div>
-		<div class="testGroup">
-			<div class="testArea">
-				<div class="testName">Download</div>
-				<canvas id="dlMeter" class="meter"></canvas>
-				<div id="dlText" class="meterText"></div>
-				<div class="unit">Mbps</div>
-			</div>
-			<div class="testArea">
-				<div class="testName">Upload</div>
-				<canvas id="ulMeter" class="meter"></canvas>
-				<div id="ulText" class="meterText"></div>
-				<div class="unit">Mbps</div>
-			</div>
-		</div>
-		<div id="startStopBtn" onclick="startStop()"></div><br><br>
-		<div id="ipArea">
-			<span id="ip"></span>
-		</div>
-	</div>
-</div>
+    <main id="main">
+  <h1>Speedtest DeltaNet</h1>
+  <div id="testWrapper">
+    <div id="test">
+          <div class="testGroup">
+        <div class="testArea2">
+          <div class="testName">Ping</div>
+          <div id="pingText" class="meterText" style="color:#AA6060"></div>
+          <div class="unit">ms</div>
+        </div>
+        <div class="testArea2">
+          <div class="testName">Jitter</div>
+          <div id="jitText" class="meterText" style="color:#AA6060"></div>
+          <div class="unit">ms</div>
+        </div>
+      </div>
+      <div class="testGroup">
+        <div class="testArea">
+          <div class="testName">Download</div>
+          <canvas id="dlMeter" class="meter"></canvas>
+          <div id="dlText" class="meterText"></div>
+          <div class="unit">Mbps</div>
+        </div>
+        <div class="testArea">
+          <div class="testName">Upload</div>
+          <canvas id="ulMeter" class="meter"></canvas>
+          <div id="ulText" class="meterText"></div>
+          <div class="unit">Mbps</div>
+        </div>
+      </div>
+      <div id="startStopBtn" onclick="startStop()"></div><br><br>
+      <div id="ipArea">
+        <span id="ip"></span>
+      </div>
+    </div>
+  </div>
+</main>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -608,21 +610,21 @@ function initUI(){
       }
     });
 
-    // Mendapatkan elemen navbar
-var navbar = document.getElementById('navbar');
+      // Mendapatkan elemen navbar
+  var navbar = document.getElementById('navbar');
 
-// Menambahkan event listener untuk event scroll
-window.addEventListener('scroll', function() {
-  // Menentukan offset tinggi ketika warna harus berubah
-  var scrollHeight = window.scrollY;
+  // Menambahkan event listener untuk event scroll
+  window.addEventListener('scroll', function() {
+    // Menentukan offset tinggi ketika warna harus berubah
+    var scrollHeight = window.scrollY;
 
-  // Menambahkan atau menghapus kelas 'scrolled' berdasarkan offset tinggi
-  if (scrollHeight > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
+    // Menambahkan atau menghapus kelas 'scrolled' berdasarkan offset tinggi
+    if (scrollHeight > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
 
   </script>
 

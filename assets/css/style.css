@@ -1921,3 +1921,13 @@ section {
 .showcase .slider .item img:hover {
   opacity: 1.0;
 }
+
+#result {
+  margin-top: 20px;
+}
+
+buttons {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}

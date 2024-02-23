@@ -2,13 +2,24 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+<link rel="apple-touch-icon" href="favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <meta charset="UTF-8" />
 <link rel="shortcut icon" href="favicon.ico">
 <script type="text/javascript" src="speedtest.js"></script>
 <script type="text/javascript">
 function I(i){return document.getElementById(i);}
-//INITIALIZE SPEEDTEST
-var s=new Speedtest(); //create speedtest object
+//INITIALIZE SPEED TEST
+var s=new Speedtest(); //create speed test object
+<?php if(getenv("TELEMETRY")=="true"){ ?>
+s.setParameter("telemetry_level","basic");
+<?php } ?>
+<?php if(getenv("DISABLE_IPINFO")=="true"){ ?>
+s.setParameter("getIp_ispInfo",false);
+<?php } ?>
+<?php if(getenv("DISTANCE")){ ?>
+s.setParameter("getIp_ispInfo_distance","<?=getenv("DISTANCE") ?>");
+<?php } ?>
 
 var meterBk=/Trident.*rv:(\d+\.\d+)/i.test(navigator.userAgent)?"#EAEAEA":"#80808040";
 var dlColor="#6060AA",
@@ -56,7 +67,7 @@ function format(d){
 var uiData=null;
 function startStop(){
     if(s.getState()==3){
-		//speedtest is running, abort
+		//speed test is running, abort
 		s.abort();
 		data=null;
 		I("startStopBtn").className="";
@@ -64,12 +75,26 @@ function startStop(){
 	}else{
 		//test is not running, begin
 		I("startStopBtn").className="running";
+		I("shareArea").style.display="none";
 		s.onupdate=function(data){
             uiData=data;
 		};
 		s.onend=function(aborted){
             I("startStopBtn").className="";
             updateUI(true);
+            if(!aborted){
+                //if testId is present, show sharing panel, otherwise do nothing
+                try{
+                    var testId=uiData.testId;
+                    if(testId!=null){
+                        var shareURL=window.location.href.substring(0,window.location.href.lastIndexOf("/"))+"/results/?id="+testId;
+                        I("resultsImg").src=shareURL;
+                        I("resultsURL").value=shareURL;
+                        I("testId").innerHTML=testId;
+                        I("shareArea").style.display="";
+                    }
+                }catch(e){}
+            }
 		};
 		s.start();
 	}
@@ -212,19 +237,56 @@ function initUI(){
 		display:block;
         margin: 0 auto;
 	}
+	#shareArea{
+		width:95%;
+		max-width:40em;
+		margin:0 auto;
+		margin-top:2em;
+	}
+	#shareArea > *{
+		display:block;
+		width:100%;
+		height:auto;
+		margin: 0.25em 0;
+	}
+	#privacyPolicy{
+        position:fixed;
+        top:2em;
+        bottom:2em;
+        left:2em;
+        right:2em;
+        overflow-y:auto;
+        width:auto;
+        height:auto;
+        box-shadow:0 0 3em 1em #000000;
+        z-index:999999;
+        text-align:left;
+        background-color:#FFFFFF;
+        padding:1em;
+	}
+	a.privacy{
+        text-align:center;
+        font-size:0.8em;
+        color:#808080;
+        display:block;
+	}
 	@media all and (max-width:40em){
 		body{
 			font-size:0.8em;
 		}
 	}
 </style>
-<title>Speedtest DeltaNet</title>
+<title><?= getenv('TITLE') ?: 'LibreSpeed Example' ?></title>
 </head>
 <body>
-<h1>Speedtest DeltaNet</h1>
+<h1><?= getenv('TITLE') ?: 'LibreSpeed Example' ?></h1>
 <div id="testWrapper">
+	<div id="startStopBtn" onclick="startStop()"></div><br/>
+	<?php if(getenv("TELEMETRY")=="true"){ ?>
+        <a class="privacy" href="#" onclick="I('privacyPolicy').style.display=''">Privacy</a>
+	<?php } ?>
 	<div id="test">
-        <div class="testGroup">
+		<div class="testGroup">
 			<div class="testArea2">
 				<div class="testName">Ping</div>
 				<div id="pingText" class="meterText" style="color:#AA6060"></div>
@@ -241,16 +303,15 @@ function initUI(){
 				<div class="testName">Download</div>
 				<canvas id="dlMeter" class="meter"></canvas>
 				<div id="dlText" class="meterText"></div>
-				<div class="unit">Mbps</div>
+				<div class="unit">Mbit/s</div>
 			</div>
 			<div class="testArea">
 				<div class="testName">Upload</div>
 				<canvas id="ulMeter" class="meter"></canvas>
 				<div id="ulText" class="meterText"></div>
-				<div class="unit">Mbps</div>
+				<div class="unit">Mbit/s</div>
 			</div>
 		</div>
-		<div id="startStopBtn" onclick="startStop()"></div><br><br>
 		<div id="ipArea">
 			<span id="ip"></span>
 		</div>
@@ -262,6 +323,44 @@ function initUI(){
 		</div>
 	</div>
 	<a href="https://github.com/librespeed/speedtest">Source code</a>
+</div>
+<div id="privacyPolicy" style="display:none">
+    <h2>Privacy Policy</h2>
+    <p>This HTML5 speed test server is configured with telemetry enabled.</p>
+    <h4>What data we collect</h4>
+    <p>
+        At the end of the test, the following data is collected and stored:
+        <ul>
+            <li>Test ID</li>
+            <li>Time of testing</li>
+            <li>Test results (download and upload speed, ping and jitter)</li>
+            <li>IP address</li>
+            <li>ISP information</li>
+            <li>Approximate location (inferred from IP address, not GPS)</li>
+            <li>User agent and browser locale</li>
+            <li>Test log (contains no personal information)</li>
+        </ul>
+    </p>
+    <h4>How we use the data</h4>
+    <p>
+        Data collected through this service is used to:
+        <ul>
+            <li>Allow sharing of test results (sharable image for forums, etc.)</li>
+            <li>To improve the service offered to you (for instance, to detect problems on our side)</li>
+        </ul>
+        No personal information is disclosed to third parties.
+    </p>
+    <h4>Your consent</h4>
+    <p>
+        By starting the test, you consent to the terms of this privacy policy.
+    </p>
+    <h4>Data removal</h4>
+    <p>
+        If you want to have your information deleted, you need to provide either the ID of the test or your IP address. This is the only way to identify your data, without this information we won't be able to comply with your request.<br/><br/>
+        Contact this email address for all deletion requests: <a href="mailto:<?=getenv("EMAIL") ?>"><?=getenv("EMAIL") ?></a>.
+    </p>
+    <br/><br/>
+    <a class="privacy" href="#" onclick="I('privacyPolicy').style.display='none'">Close</a><br/>
 </div>
 <script type="text/javascript">setTimeout(function(){initUI()},100);</script>
 </body>

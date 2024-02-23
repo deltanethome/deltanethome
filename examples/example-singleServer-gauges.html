@@ -218,11 +218,12 @@ function initUI(){
 		}
 	}
 </style>
-<title>Speedtest DeltaNet</title>
+<title>LibreSpeed Example</title>
 </head>
 <body>
-<h1>Speedtest DeltaNet</h1>
+<h1>LibreSpeed Example</h1>
 <div id="testWrapper">
+	<div id="startStopBtn" onclick="startStop()"></div>
 	<div id="test">
         <div class="testGroup">
 			<div class="testArea2">
@@ -241,24 +242,17 @@ function initUI(){
 				<div class="testName">Download</div>
 				<canvas id="dlMeter" class="meter"></canvas>
 				<div id="dlText" class="meterText"></div>
-				<div class="unit">Mbps</div>
+				<div class="unit">Mbit/s</div>
 			</div>
 			<div class="testArea">
 				<div class="testName">Upload</div>
 				<canvas id="ulMeter" class="meter"></canvas>
 				<div id="ulText" class="meterText"></div>
-				<div class="unit">Mbps</div>
+				<div class="unit">Mbit/s</div>
 			</div>
 		</div>
-		<div id="startStopBtn" onclick="startStop()"></div><br><br>
 		<div id="ipArea">
 			<span id="ip"></span>
-		</div>
-		<div id="shareArea" style="display:none">
-			<h3>Share results</h3>
-			<p>Test ID: <span id="testId"></span></p>
-			<input type="text" value="" id="resultsURL" readonly="readonly" onclick="this.select();this.focus();this.select();document.execCommand('copy');alert('Link copied')"/>
-			<img src="" id="resultsImg" />
 		</div>
 	</div>
 	<a href="https://github.com/librespeed/speedtest">Source code</a>

@@ -26,11 +26,22 @@
   <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-TWD2QT9Z');</script>
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TWD2QT9Z');
+  </script>
   <!-- End Google Tag Manager -->
 
   <!-- Google Search Console -->
@@ -38,13 +49,20 @@
 
   <!-- Google Analytics -->
   <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  
-  ga('create', 'UA-XXXXX-Y', 'auto');
-  ga('send', 'pageview');
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview');
   </script>
   <!-- End Google Analytics -->
 
@@ -52,7 +70,10 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLM303EF0N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'G-ZLM303EF0N');
@@ -84,8 +105,8 @@
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWD2QT9Z"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWD2QT9Z" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- WA CS -->
@@ -104,7 +125,7 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
       <h1 class="logo"><a href="https://deltanethome.com">
-          <img src="assets/img/logodelta.png" width="170" height="280"  class="light-version-logo">
+          <img src="assets/img/logodelta.png" width="170" height="280" class="light-version-logo">
         </a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png"  class="img-fluid"></a>-->
@@ -128,21 +149,27 @@
         <ul>
           <!-- <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li> -->
           <li><a href="#popup1" class="text-decoration-none">Promo</a></li>
-          <li class="text-decoration-none dropdown"><a href="#"><span>Produk</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="text-decoration-none dropdown"><a href="#"><span>Produk</span> <i
+                class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="paketbroadband.html">Internet Broadband</a></li>
-              <li class="new-label" ><a href="https://wa.me/6285850102226?&text=Halo,%20Saya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20internet%20Dedicated%20">Internet Dedicated</a></li>
+              <li class="new-label"><a
+                  href="https://wa.me/6285850102226?&text=Halo,%20Saya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20internet%20Dedicated%20">Internet
+                  Dedicated</a></li>
             </ul>
           </li>
           <li><a class="text-decoration-none" href="area.html">Lokasi Area</a></li>
-          <li class="text-decoration-none dropdown"><a href="#"><span>Bantuan & Dukungan</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="text-decoration-none dropdown"><a href="#"><span>Bantuan & Dukungan</span> <i
+                class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="registrasi.html">Pendaftaran Member</a></li>
               <li><a href="pembayaran.html">Pembayaran</a></li>
               <!-- <li><a href="#about">About Us</a></li> -->
               <li><a href="blog.html">Blog</a></li>
               <!-- <li><a href="#portfolio">Portfolio</a></li> -->
-              <li><a href="https://wa.me/6285850102226?&text=Halo,%20saya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20...">FAQ</a></li>
+              <li><a
+                  href="https://wa.me/6285850102226?&text=Halo,%20saya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20...">FAQ</a>
+              </li>
               <!-- <li><a href="https://api.whatsapp.com/send?phone=6285850102226&text=Halo%20Admin,%20Saya%20ingin%20bekerja%20sama%20dengan%20Delta.Net%20.">Kerjasama</a></li> -->
               <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
@@ -162,7 +189,7 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      
+
     </div>
   </header><!-- End Header -->
 
@@ -170,27 +197,27 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container-fluid" data-aos="fade-up">
-        <div class="row justify-content-center">
-            <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                <h2>Internet Super Cepat dan Stabil</h2>
-                <h2>Harga Super Terjangkau</h2>
-                <br>
-                <h1>Selamat datang di DeltanetHome</h1>
-                <div>
-                    <a href="https://api.whatsapp.com/send?phone=6285850102226&text=Halo%20Admin,%20Saya%20ingin%20membeli%20paket%20wifi%20dari%20website%20deltanethome.com%20"
-                        class="btn-get-started scrollto">Beli Sekarang</a>
+      <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h2>Internet Super Cepat dan Stabil</h2>
+          <h2>Harga Super Terjangkau</h2>
+          <br>
+          <h1>Selamat datang di DeltanetHome</h1>
+          <div>
+            <a href="https://api.whatsapp.com/send?phone=6285850102226&text=Halo%20Admin,%20Saya%20ingin%20membeli%20paket%20wifi%20dari%20website%20deltanethome.com%20"
+              class="btn-get-started scrollto">Beli Sekarang</a>
 
-                        <a href="https://api.whatsapp.com/send?phone=6285850102226&text=Halo%20Admin,%20Saya%20ingin%20membeli%20paket%20wifi%20dari%20website%20deltanethome.com%20"
-                        class="btn-get-started scrollto">Register</a>
-                    
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
-                <img src="assets/img/hero-img.png" class="img-fluid animated">
-            </div>
+            <a href="https://api.whatsapp.com/send?phone=6285850102226&text=Halo%20Admin,%20Saya%20ingin%20membeli%20paket%20wifi%20dari%20website%20deltanethome.com%20"
+              class="btn-get-started scrollto">Register</a>
+
+          </div>
         </div>
+        <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
+          <img src="assets/img/hero-img.png" class="img-fluid animated">
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
 
 
@@ -199,33 +226,33 @@
 
     <!-- ======= Pricing Section ======= -->
     <!-- <section id="klien" class="klein section-bg"> -->
-      <div class="container-lg py-3">
-        <div class="section col-md-12 m-auto text-center py-3">
-          <h2>Partners Kepercayaan Kami :</h2>
-          <!-- <p class="section-title">
+    <div class="container-lg py-3">
+      <div class="section col-md-12 m-auto text-center py-3">
+        <h2>Partners Kepercayaan Kami :</h2>
+        <!-- <p class="section-title">
               Klien Kami :
           </p> -->
-          <!-- <h3 class="pricing-header h3 semi-bold-600">Kita Profesional, Dipercaya, Dan Dicintai Oleh Usaha Kecil-Menengah, Di Mana Saja!</h3> -->
+        <!-- <h3 class="pricing-header h3 semi-bold-600">Kita Profesional, Dipercaya, Dan Dicintai Oleh Usaha Kecil-Menengah, Di Mana Saja!</h3> -->
 
-        </div>
-        <div class="showcase">
-          <div class="slider clearfix">
-            <img src="./assets/img/kerjasama/jatara.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/aecorp.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/apjii.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/deltanet.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/logoldp.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/ngeprojectin.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/jatara.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/kominfo.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/fiberstar.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/deltanet.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/apjii.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/usman.png"  class="item" width="200px" height="90px" />
-            <img src="./assets/img/kerjasama/mikrotik.png"  class="item" width="200px" height="90px" />
-          </div>
+      </div>
+      <div class="showcase">
+        <div class="slider clearfix">
+          <img src="./assets/img/kerjasama/jatara.png" class="item" width="200px" height="90px" />
+          <img src="./assets/img/kerjasama/aecorp.png" class="item" width="200px" height="90px" />
+          <img src="./assets/img/kerjasama/apjii.png" class="item" width="200px" height="90px" />
+          <img src="./assets/img/kerjasama/deltanet.png" class="item" width="200px" height="90px" />
+          <img src="./assets/img/kerjasama/logoldp.png" class="item" width="200px" height="90px" />
+          <img src="./assets/img/kerjasama/ngeprojectin.png" class="item" width="200px" height="90px" />
+          <img src="./assets/img/kerjasama/jatara.png" class="item" width="200px" height="90px" />
+          <img src="./assets/img/kerjasama/kominfo.png" class="item" width="200px" height="90px" />
+          <img src="./assets/img/kerjasama/fiberstar.png" class="item" width="200px" height="90px" />
+          <img src="./assets/img/kerjasama/deltanet.png" class="item" width="200px" height="90px" />
+          <img src="./assets/img/kerjasama/apjii.png" class="item" width="200px" height="90px" />
+          <img src="./assets/img/kerjasama/usman.png" class="item" width="200px" height="90px" />
+          <img src="./assets/img/kerjasama/mikrotik.png" class="item" width="200px" height="90px" />
         </div>
       </div>
+    </div>
     <!-- </section> -->
 
 
@@ -238,17 +265,19 @@
           <h2>Pilih Paket Impian Anda</h2>
           <p>Layanan internet terbaik dengan paket bersahabat dan dukungan support 24 jam untuk kemudahan Anda
             meraih internet!</p><br>
-            <h4>GRATIS pemasangan untuk paket 10 Mbps keatas</h4>
+          <h4>GRATIS pemasangan untuk paket 15 Mbps keatas</h4>
         </div>
 
         <div class="row">
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="box">
-              <h3>Basic</h3>
+              <h3>Elite</h3>
               <h4><sup>Rp</sup>100.000<span> / bulan</span></h4>
               <ul>
-                <li>5 Mbps</li>
+                <li class="na">5 Mbps</li>
+                <h2>7 Mbps <span></li>
+                </h2>
                 <li>Unlimited Kuota Internet</li>
                 <li>Bebas Biaya Maintance</li>
                 <li>Gratis Biaya Sewa Modem</li>
@@ -266,9 +295,11 @@
           <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
             <div class="box featured">
               <h3>Flash</h3>
-              <h4><sup>Rp</sup>155.000<span> / bulan</span></h4>
+              <h4><sup>Rp</sup>130.000<span> / bulan</span></h4>
               <ul>
-                <li>10 Mbps</li>
+                <li class="na">8 Mbps</li>
+                <h2>10 Mbps <span></li>
+                </h2>
                 <li>Unlimited Kuota Internet</li>
                 <li>Bebas Biaya Maintance</li>
                 <li>Gratis Biaya Sewa Modem</li>
@@ -284,10 +315,12 @@
 
           <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
             <div class="box">
-              <h3>Advanced</h3>
-              <h4><sup>Rp</sup>180.000<span> / bulan</span></h4>
+              <h3>Gold</h3>
+              <h4><sup>Rp</sup>150.000<span> / bulan</span></h4>
               <ul>
-                <li>15 Mbps</li>
+                <li class="na">10 Mbps</li>
+                <h2>15 Mbps <span></li>
+                </h2>
                 <li>Unlimited Kuota Internet</li>
                 <li>Bebas Biaya Maintance</li>
                 <li>Gratis Biaya Sewa Modem</li>
@@ -301,13 +334,50 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="box">
+              <h3>Family</h3>
+              <h4><sup>Rp</sup>200.000<span> / bulan</span></h4>
+              <ul>
+                <li class="na">15 Mbps</li>
+                <h2>20 Mbps <span></li></h2>
+                <li>Unlimited Kuota Internet</li>
+                <li>Bebas Biaya Maintance</li>
+                <li>Gratis Biaya Sewa Modem</li>
+                <li>Internet Stabil</li>
+                <li>Prioritas Layanan</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="https://api.whatsapp.com/send?phone=6285850102226&text=Halo%20Admin,%20Saya%20ingin%20membeli%20paket%2015%20Mbps%20dari%20website%20deltanethome.com%20"
+                  class="btn-buy">Pilih Paket</a>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+    </section><!-- End Pricing Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Paket Impian Super</h2>
+        </div>
+
+        <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100"></div>
+        <div class="row">
+
+          <div class="col-lg-12 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
             <div class="box">
               <span class="advanced">Turbo</span>
               <h3>Turbo</h3>
-              <h4><sup>Rp</sup>210.000<span> / bulan</span></h4>
+              <h4><sup>Rp</sup>250.000<span> / bulan</span></h4>
               <ul>
-                <li>20 Mbps</li>
+                <li class="na">20 Mbps</li>
+                <h2>30 Mbps <span></li></h2>
                 <li>Unlimited Kuota Internet</li>
                 <li>Bebas Biaya Maintance</li>
                 <li>Gratis Biaya Sewa Modem</li>
@@ -332,7 +402,7 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150">
-            <img src="assets/img/internetdunia0.jpg" width="500px" class="img-fluid" >
+            <img src="assets/img/internetdunia0.jpg" width="500px" class="img-fluid">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
             <h3>Kenapa DELTA.NET Berbeda?</h3>
@@ -502,7 +572,7 @@
             </div>
           </div>
           <div class="image col-lg-6 order-1 order-lg-2 " data-aos="zoom-in" data-aos-delay="100">
-            <img src="assets/img/features.svg"  class="img-fluid">
+            <img src="assets/img/features.svg" class="img-fluid">
           </div>
         </div>
 
@@ -566,7 +636,7 @@
                   Teknisi datang sesuai jadwal yang disepakati, pemasangan rapih, komunikasi dengan teknisi juga ramah.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" >
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img">
                 <h3>Devi Sandrawati</h3>
                 <h4>Client Rumahan</h4>
               </div>
@@ -580,7 +650,7 @@
                   menjadikan saya sangat merekomendasikan berlanggan di Delta.Net .
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" >
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img">
                 <h3>Ardi</h3>
                 <h4>Founder Ngeprojectin</h4>
               </div>
@@ -593,7 +663,7 @@
                   Pelayanan bagus dan cepat, kualitas hebat dan harga bershabat.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" >
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img">
                 <h3> Melati Rahma</h3>
                 <h4>Toko ATK</h4>
               </div>
@@ -607,7 +677,7 @@
                   Delta.Net
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" >
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img">
                 <h3>Fauzan</h3>
                 <h4>Freelancer</h4>
               </div>
@@ -620,7 +690,7 @@
                   Internet cepat dan murah, the best provider
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" >
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img">
                 <h3>Sultan Wisana</h3>
                 <h4>Entrepreneur</h4>
               </div>
@@ -636,7 +706,7 @@
     <!-- ======= Portfolio Section ======= -->
 
 
-    
+
     <!-- End Portfolio Section -->
 
 
@@ -714,7 +784,7 @@
 
       </div>
     </section>
-    
+
     <!-- End Frequently Asked Questions Section -->
 
     <!-- ======= Contact Section ======= -->
@@ -884,7 +954,8 @@
           </div>
         </div>
         <div class="social-links text-center text-md-right pt-3 pt-md-0">
-          <a href="https://www.facebook.com/profile.php?id=61550855394625" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61550855394625" class="facebook"><i
+              class="bx bxl-facebook"></i></a>
           <a href="https://www.instagram.com/deltanethome/" class="instagram"><i class="bx bxl-instagram"></i></a>
         </div>
       </div>
@@ -905,25 +976,27 @@
   <script>
     $(document).ready(function () {
       $('.php-email-form').submit(function (e) {
-          e.preventDefault();
-  
-          // Get data from the form
-          var nama = $('#name').val();  
-          var email = $('#email').val();
-          var subject = $('#subject').val();
-          var message = $('#message').val();
-  
-          // Build the message for WhatsApp
-          var pesan = "Name: " + nama + "%0AEmail: " + email + "%0ASubject: " + subject + "%0AMessage: " + message;
-  
-          // Replace with your WhatsApp number
-          var nomorWhatsApp = "085850102226";
-  
-          // Create URL to open WhatsApp
-          var whatsappUrl = "https://api.whatsapp.com/send?phone=" + nomorWhatsApp + "&text=" + encodeURIComponent(pesan);
-  
-          // Open the WhatsApp link in a new tab
-          window.open(whatsappUrl, '_blank');
+        e.preventDefault();
+
+        // Get data from the form
+        var nama = $('#name').val();
+        var email = $('#email').val();
+        var subject = $('#subject').val();
+        var message = $('#message').val();
+
+        // Build the message for WhatsApp
+        var pesan = "Name: " + nama + "%0AEmail: " + email + "%0ASubject: " + subject + "%0AMessage: " +
+        message;
+
+        // Replace with your WhatsApp number
+        var nomorWhatsApp = "085850102226";
+
+        // Create URL to open WhatsApp
+        var whatsappUrl = "https://api.whatsapp.com/send?phone=" + nomorWhatsApp + "&text=" +
+          encodeURIComponent(pesan);
+
+        // Open the WhatsApp link in a new tab
+        window.open(whatsappUrl, '_blank');
       });
     });
 
@@ -988,21 +1061,20 @@
     });
 
     // Mendapatkan elemen navbar
-var navbar = document.getElementById('navbar');
+    var navbar = document.getElementById('navbar');
 
-// Menambahkan event listener untuk event scroll
-window.addEventListener('scroll', function() {
-  // Menentukan offset tinggi ketika warna harus berubah
-  var scrollHeight = window.scrollY;
+    // Menambahkan event listener untuk event scroll
+    window.addEventListener('scroll', function () {
+      // Menentukan offset tinggi ketika warna harus berubah
+      var scrollHeight = window.scrollY;
 
-  // Menambahkan atau menghapus kelas 'scrolled' berdasarkan offset tinggi
-  if (scrollHeight > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
-
+      // Menambahkan atau menghapus kelas 'scrolled' berdasarkan offset tinggi
+      if (scrollHeight > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
   </script>
 
   <!-- Vendor JS Files -->
